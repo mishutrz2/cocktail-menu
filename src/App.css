@@ -1,38 +1,142 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Courier New', Courier, monospace;
+}
+
+body{
+  margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 20%;
+  background-color: rgb(41, 148, 130);
+}
+
+.radio-btn-container {
+  display:grid;
+
+}
+
+.label{
+  padding: 10px 20px 10px 20px;
+}
+
+.radio-btn {
+  max-width: 380px;
+  accent-color: salmon;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  background: rgb(4, 66, 56);
+}
+.radio-btn:hover {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  background: rgb(255, 255, 255);
+  color: black;
+}
+
+.checkbox-container{
+  padding-bottom: 10px
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.filterItem{
+  padding: 8px 4px 8px 40px;
+  background-color: aliceblue;
+  width: 300px;
+  font-weight: 600;
+}
+
+.filtersBtn{
+  background-color: rgb(0, 68, 57);
+  color: white;
+  padding: 12px 24px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 900;
+  width: 300px;
+  margin: 10px 0px 4px 0px;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 
+.item{
+  float: left;
+  background-color: rgb(0, 68, 57);
+  color: white;
+  width: 370px;
+  height: 420px;
+  padding-top: 10px;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-align: center;
+  font-size: large;
+  margin: 8px;
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.show{
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.presentation{
+  position: relative;
+}
+
+.btn{
+  border: none;
+  font-size: large;
+  font-weight: 800;
+  margin-bottom: 30px;
+  padding: 20px 40px;
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.btn:hover{
+  color: white;
+  background-color: rgb(0, 43, 35);
+}
+
+.ingredients{
+  padding: 4px 10px 10px 10px;
+  color: white;
+  font-size:medium;
+}
+
+.about{
+  padding: 8px 10px 2px 10px;
+  color: rgb(0, 68, 57);
+  font-size: small;
+}
+
+.about:hover{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title{
+  font-size: larger;
+  font-weight: bolder;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cocktailsList{
+  list-style: none;
 }
+
+
+
+.unavlItem{
+  display: none;
+} */
