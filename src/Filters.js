@@ -16,39 +16,41 @@ const ingredientss = [
   { _id: 11, name: "orange juice" },
   { _id: 12, name: "lemon juice" },
   { _id: 13, name: "apple juice" },
-  // { _id: 14, name: "orange liqueur" },
-  // { _id: 15, name: "melon liqueur" },
-  // { _id: 16, name: "banana liqueur" },
-  // { _id: 17, name: "ice" },
-  // { _id: 18, name: "salt" },
-  // { _id: 19, name: "simple syrup" },
-  // { _id: 20, name: "sweet and sour" },
-  // { _id: 21, name: "water" },
+  { _id: 14, name: "tomato juice" },
+  // { _id: 15, name: "orange liqueur" },
+  // { _id: 16, name: "melon liqueur" },
+  // { _id: 17, name: "banana liqueur" },
+  // { _id: 18, name: "ice" },
+  // { _id: 19, name: "salt" },
+  // { _id: 20, name: "simple syrup" },
+  // { _id: 21, name: "sweet and sour" },
+  // { _id: 22, name: "water" },
 ];
 
-const spirits = [
-  "vodka",
-  "tequila",
-  "whiskey",
-  "rum",
-  "gin",
-  "triple sec",
-  "lemon vodka",
-  "blue curacao",
-];
-const juices = [
-  "lime juice",
-  "cranberry juice",
-  "orange juice",
-  "lemon juice",
-  "apple juice",
-];
-const liqueur = ["orange liqueur", "melon liqueur", "banana liqueur"];
-const misc = ["ice", "salt", "simple syrup", "sweet and sour", "water"];
-// all ingredients in filters list
-const ingredients = spirits.concat(juices).concat(liqueur).concat(misc);
+// const spirits = [
+//   "vodka",
+//   "tequila",
+//   "whiskey",
+//   "rum",
+//   "gin",
+//   "triple sec",
+//   "lemon vodka",
+//   "blue curacao",
+// ];
+// const juices = [
+//   "lime juice",
+//   "cranberry juice",
+//   "orange juice",
+//   "lemon juice",
+//   "apple juice",
+//   "tomato juice",
+// ];
+// const liqueur = ["orange liqueur", "melon liqueur", "banana liqueur"];
+// const misc = ["ice", "salt", "simple syrup", "sweet and sour", "water"];
+// // all ingredients in filters list
+// const ingredients = spirits.concat(juices).concat(liqueur).concat(misc);
 
-function Filters() {
+function Filters(props) {
   const [drinkType, setDrinkType] = useState("all");
   const [filtersView, setFiltersView] = useState(false);
   const [checked, setChecked] = useState([]);
@@ -70,9 +72,9 @@ function Filters() {
                   type="checkbox"
                   name={value.name}
                   onChange={() => {
-                    handleToggle(value._id);
+                    handleToggle(value.name);
                   }}
-                  checked={checked.indexOf(value._id) === -1 ? false : true}
+                  checked={checked.indexOf(value.name) === -1 ? false : true}
                 />
                 <label style={{ paddingLeft: "10px" }} htmlFor={value.name}>
                   {value.name}
@@ -86,8 +88,8 @@ function Filters() {
     );
   };
 
+  // on checkbox filters change
   const handleToggle = (value) => {
-    console.log("handdle toggle");
     const currIndex = checked.indexOf(value);
     const newChecked = [...checked];
 
@@ -97,6 +99,15 @@ function Filters() {
       newChecked.splice(currIndex, 1);
     }
     setChecked(newChecked);
+
+    // update in parent component
+    props.handleFilters(newChecked);
+  };
+
+  // on radio button change
+  const handleClick = (value) => {
+    setDrinkType(value);
+    props.handleDrinkType(value);
   };
 
   return (
@@ -106,7 +117,7 @@ function Filters() {
         <div
           className="radio-btn"
           onClick={() => {
-            setDrinkType("all");
+            handleClick("all");
           }}
         >
           <input
@@ -122,7 +133,7 @@ function Filters() {
         <div
           className="radio-btn"
           onClick={() => {
-            setDrinkType("long drinks");
+            handleClick("long drinks");
           }}
         >
           <input
@@ -138,7 +149,7 @@ function Filters() {
         <div
           className="radio-btn"
           onClick={() => {
-            setDrinkType("cocktails");
+            handleClick("cocktails");
           }}
         >
           <input
@@ -154,7 +165,7 @@ function Filters() {
         <div
           className="radio-btn"
           onClick={() => {
-            setDrinkType("shots");
+            handleClick("shots");
           }}
         >
           <input
@@ -170,7 +181,7 @@ function Filters() {
         <div
           className="radio-btn"
           onClick={() => {
-            setDrinkType("other");
+            handleClick("other");
           }}
         >
           <input
@@ -190,9 +201,6 @@ function Filters() {
         Filters
       </button>
       <div>{renderCheckboxList()}</div>
-
-      {/* Menu Items
-      <div className="menu-container">hello</div> */}
     </div>
   );
 }
