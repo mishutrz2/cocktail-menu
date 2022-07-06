@@ -16,14 +16,14 @@ const ingredientss = [
   { _id: 11, name: "orange juice" },
   { _id: 12, name: "lemon juice" },
   { _id: 13, name: "apple juice" },
-  { _id: 14, name: "orange liqueur" },
-  { _id: 15, name: "melon liqueur" },
-  { _id: 16, name: "banana liqueur" },
-  { _id: 17, name: "ice" },
-  { _id: 18, name: "salt" },
-  { _id: 19, name: "simple syrup" },
-  { _id: 20, name: "sweet and sour" },
-  { _id: 21, name: "water" },
+  // { _id: 14, name: "orange liqueur" },
+  // { _id: 15, name: "melon liqueur" },
+  // { _id: 16, name: "banana liqueur" },
+  // { _id: 17, name: "ice" },
+  // { _id: 18, name: "salt" },
+  // { _id: 19, name: "simple syrup" },
+  // { _id: 20, name: "sweet and sour" },
+  // { _id: 21, name: "water" },
 ];
 
 const spirits = [
@@ -48,10 +48,10 @@ const misc = ["ice", "salt", "simple syrup", "sweet and sour", "water"];
 // all ingredients in filters list
 const ingredients = spirits.concat(juices).concat(liqueur).concat(misc);
 
-function Menu() {
+function Filters() {
   const [drinkType, setDrinkType] = useState("all");
   const [filtersView, setFiltersView] = useState(false);
-  const [filters, setFilters] = useState([]);
+  const [checked, setChecked] = useState([]);
 
   const toggleFilters = () => {
     setFiltersView(!filtersView);
@@ -61,7 +61,7 @@ function Menu() {
     return (
       filtersView && (
         <div className="checkbox-container">
-          {ingredients.map((value, index) => {
+          {ingredientss.map((value, index) => {
             return (
               <div key={index} className="filterItem">
                 <input
@@ -72,9 +72,10 @@ function Menu() {
                   onChange={() => {
                     handleToggle(value._id);
                   }}
+                  checked={checked.indexOf(value._id) === -1 ? false : true}
                 />
                 <label style={{ paddingLeft: "10px" }} htmlFor={value.name}>
-                  {value}
+                  {value.name}
                 </label>
                 <br />
               </div>
@@ -87,6 +88,15 @@ function Menu() {
 
   const handleToggle = (value) => {
     console.log("handdle toggle");
+    const currIndex = checked.indexOf(value);
+    const newChecked = [...checked];
+
+    if (currIndex === -1) {
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currIndex, 1);
+    }
+    setChecked(newChecked);
   };
 
   return (
@@ -187,4 +197,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default Filters;

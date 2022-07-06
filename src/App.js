@@ -1,13 +1,13 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import Menu from "./Menu";
+import Filters from "./Filters";
 
 function App() {
   return (
     <div>
       <br />
       {/* 5 buttons menu */}
-      <Menu></Menu>
+      <Filters></Filters>
 
       <br />
     </div>
