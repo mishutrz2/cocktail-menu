@@ -149,7 +149,7 @@ function Menu() {
       </button>
       {filtersView && (
         <div className="checkbox-container">
-          {ingredients.map((id, name) => {
+          {ingredients.map((name) => {
             return (
               <div key={name} className="filterItem">
                 <input
