@@ -9,11 +9,7 @@ function App() {
       {/* 5 buttons menu */}
       <Menu></Menu>
 
-      <hr />
-      <div>
-        <br />
-        <h2>ITEMS</h2>
-      </div>
+      <br />
     </div>
   );
 }

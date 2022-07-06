@@ -3,27 +3,27 @@ import { useState } from "react";
 import { availableIngredients } from "./available.js";
 
 const ingredientss = [
-  { id: 1, name: "vodka" },
-  { id: 2, name: "tequila" },
-  { id: 3, name: "whiskey" },
-  { id: 4, name: "rum" },
-  { id: 5, name: "gin" },
-  { id: 6, name: "triple sec" },
-  { id: 7, name: "lemon vodka" },
-  { id: 8, name: "blue curacao" },
-  { id: 9, name: "lime juice" },
-  { id: 10, name: "cranberry juice" },
-  { id: 11, name: "orange juice" },
-  { id: 12, name: "lemon juice" },
-  { id: 13, name: "apple juice" },
-  { id: 14, name: "orange liqueur" },
-  { id: 15, name: "melon liqueur" },
-  { id: 16, name: "banana liqueur" },
-  { id: 17, name: "ice" },
-  { id: 18, name: "salt" },
-  { id: 19, name: "simple syrup" },
-  { id: 20, name: "sweet and sour" },
-  { id: 21, name: "water" },
+  { _id: 1, name: "vodka" },
+  { _id: 2, name: "tequila" },
+  { _id: 3, name: "whiskey" },
+  { _id: 4, name: "rum" },
+  { _id: 5, name: "gin" },
+  { _id: 6, name: "triple sec" },
+  { _id: 7, name: "lemon vodka" },
+  { _id: 8, name: "blue curacao" },
+  { _id: 9, name: "lime juice" },
+  { _id: 10, name: "cranberry juice" },
+  { _id: 11, name: "orange juice" },
+  { _id: 12, name: "lemon juice" },
+  { _id: 13, name: "apple juice" },
+  { _id: 14, name: "orange liqueur" },
+  { _id: 15, name: "melon liqueur" },
+  { _id: 16, name: "banana liqueur" },
+  { _id: 17, name: "ice" },
+  { _id: 18, name: "salt" },
+  { _id: 19, name: "simple syrup" },
+  { _id: 20, name: "sweet and sour" },
+  { _id: 21, name: "water" },
 ];
 
 const spirits = [
@@ -55,6 +55,38 @@ function Menu() {
 
   const toggleFilters = () => {
     setFiltersView(!filtersView);
+  };
+
+  const renderCheckboxList = () => {
+    return (
+      filtersView && (
+        <div className="checkbox-container">
+          {ingredients.map((value, index) => {
+            return (
+              <div key={index} className="filterItem">
+                <input
+                  className="filterItemInput"
+                  id={value.name}
+                  type="checkbox"
+                  name={value.name}
+                  onChange={() => {
+                    handleToggle(value._id);
+                  }}
+                />
+                <label style={{ paddingLeft: "10px" }} htmlFor={value.name}>
+                  {value}
+                </label>
+                <br />
+              </div>
+            );
+          })}
+        </div>
+      )
+    );
+  };
+
+  const handleToggle = (value) => {
+    console.log("handdle toggle");
   };
 
   return (
@@ -147,34 +179,10 @@ function Menu() {
       <button className="filtersBtn" onClick={toggleFilters}>
         Filters
       </button>
-      {filtersView && (
-        <div className="checkbox-container">
-          {ingredients.map((id, name) => {
-            return (
-              <div key={name} className="filterItem">
-                <input
-                  className="filterItemInput"
-                  id={name}
-                  type="checkbox"
-                  name={name}
-                  onChange={() => {
-                    setFilters(["vodka", "tequila"]);
-                  }}
-                />
-                <label style={{ paddingLeft: "10px" }} htmlFor={name}>
-                  {name}
-                </label>
-                <br />
-              </div>
-            );
-          })}
-        </div>
-      )}
+      <div>{renderCheckboxList()}</div>
 
       {/* Menu Items
       <div className="menu-container">hello</div> */}
-      <div> {filters.join(", ")} </div>
-      <div> {ingredientss.at(1).name} </div>
     </div>
   );
 }
