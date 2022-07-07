@@ -1,12 +1,12 @@
 // unavailable ingredients have a dash in front of their name
 // ingredients must also be present in Filter.js "ingredients" array !!!
-export const availableIngredients = [
-  "-vodka",
+export const listIngredients = [
+  "vodka",
   "tequila",
-  "-whiskey",
+  "whiskey",
   "-rum",
   "gin",
-  "lemon vodka",
+  "-lemon vodka",
   "triple sec",
   "blue curacao",
   "lime juice",
@@ -14,12 +14,15 @@ export const availableIngredients = [
   "orange juice",
   "-apple juice",
   "tomato juice",
-  "-lemon juice",
+  "lemon juice",
   "-orange liqueur",
   "-melon liqueur",
   "-banana liqueur",
+  "cola",
+  "tonic",
   "ice",
   "salt",
+  "black pepper",
   "simple syrup",
   "-sweet and sour",
   "water",
@@ -40,7 +43,7 @@ export const availableIngredients = [
 export const drinks = [
   {
     name: "Margarita",
-    type: "cocktail",
+    type: "cocktails",
     ingredients: [
       "tequila",
       "triple sec",
@@ -54,7 +57,7 @@ export const drinks = [
   },
   {
     name: "Cosmopolitan",
-    type: "cocktail",
+    type: "cocktails",
     ingredients: [
       "lemon vodka",
       "triple sec",
@@ -67,7 +70,7 @@ export const drinks = [
   },
   {
     name: "Bloody Marry",
-    type: "cocktail",
+    type: "cocktails",
     ingredients: [
       "vodka",
       "tomato juice",
@@ -78,5 +81,26 @@ export const drinks = [
     ],
     origin: ["USA", "France"],
     image: "image-bloody-mary.jpg",
+  },
+  {
+    name: "Kamikaze",
+    type: "shots",
+    ingredients: ["vodka", "triple sec", "lime juice"],
+    origin: ["USA", "Japan"],
+    image: "image-kamikaze.jpg",
+  },
+  {
+    name: "Whiskey Cola",
+    type: "long drinks",
+    ingredients: ["whiskey", "cola"],
+    origin: ["USA"],
+    image: "image-whiskey-cola.jpg",
+  },
+  {
+    name: "Gin Tonic",
+    type: "long drinks",
+    ingredients: ["gin", "tonic"],
+    origin: ["UK", "India"],
+    image: "image-gin-tonic.jpg",
   },
 ];

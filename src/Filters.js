@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { availableIngredients } from "./available.js";
 
 const ingredientss = [
   { _id: 1, name: "vodka" },
@@ -17,14 +16,8 @@ const ingredientss = [
   { _id: 12, name: "lemon juice" },
   { _id: 13, name: "apple juice" },
   { _id: 14, name: "tomato juice" },
-  // { _id: 15, name: "orange liqueur" },
-  // { _id: 16, name: "melon liqueur" },
-  // { _id: 17, name: "banana liqueur" },
-  // { _id: 18, name: "ice" },
-  // { _id: 19, name: "salt" },
-  // { _id: 20, name: "simple syrup" },
-  // { _id: 21, name: "sweet and sour" },
-  // { _id: 22, name: "water" },
+  { _id: 15, name: "cola" },
+  { _id: 16, name: "tonic" },
 ];
 
 // const spirits = [
@@ -46,7 +39,7 @@ const ingredientss = [
 //   "tomato juice",
 // ];
 // const liqueur = ["orange liqueur", "melon liqueur", "banana liqueur"];
-// const misc = ["ice", "salt", "simple syrup", "sweet and sour", "water"];
+// const misc = ["ice","black pepper", "salt", "simple syrup", "sweet and sour", "water", "cola", "tonic"];
 // // all ingredients in filters list
 // const ingredients = spirits.concat(juices).concat(liqueur).concat(misc);
 
