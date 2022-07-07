@@ -11,7 +11,7 @@ const ingredientss = [
   { _id: 7, name: "lemon vodka" },
   { _id: 8, name: "blue curacao" },
   { _id: 9, name: "lime juice" },
-  { _id: 10, name: "cranberry juice" },
+  //{ _id: 10, name: "cranberry juice" },
   { _id: 11, name: "orange juice" },
   { _id: 12, name: "lemon juice" },
   { _id: 13, name: "apple juice" },
@@ -25,6 +25,7 @@ const ingredientss = [
 //   "tequila",
 //   "whiskey",
 //   "rum",
+//   "white rum",
 //   "gin",
 //   "triple sec",
 //   "lemon vodka",
@@ -39,7 +40,7 @@ const ingredientss = [
 //   "tomato juice",
 // ];
 // const liqueur = ["orange liqueur", "melon liqueur", "banana liqueur"];
-// const misc = ["ice","black pepper", "salt", "simple syrup", "sweet and sour", "water", "cola", "tonic"];
+// const misc = ["ice","black pepper", "salt", "sugar", "simple syrup", "almond syrup", "sweet and sour", "water", "cola", "tonic"];
 // // all ingredients in filters list
 // const ingredients = spirits.concat(juices).concat(liqueur).concat(misc);
 

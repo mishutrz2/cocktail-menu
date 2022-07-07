@@ -5,6 +5,7 @@ export const availableIngredients = [
   "tequila",
   "whiskey",
   //"rum",
+  "white rum",
   "gin",
   //"lemon vodka",
   "triple sec",
@@ -22,8 +23,10 @@ export const availableIngredients = [
   "tonic",
   "ice",
   "salt",
+  "sugar",
   "black pepper",
   "simple syrup",
+  //"almond syrup",
   //"sweet and sour",
   "water",
 ];
@@ -41,6 +44,7 @@ export const availableIngredients = [
 //
 
 export const drinks = [
+  // cocktails
   {
     name: "Margarita",
     type: "cocktails",
@@ -54,6 +58,28 @@ export const drinks = [
     ],
     origin: ["Mexico"],
     image: "image-margarita.jpg",
+  },
+  {
+    name: "Mai Tai",
+    type: "cocktails",
+    ingredients: [
+      "rum",
+      "white rum",
+      "orange liqueur",
+      "lime juice",
+      "almond syrup",
+      "orange juice",
+      "ice",
+    ],
+    origin: ["USA"],
+    image: "image-mai-tai.jpg",
+  },
+  {
+    name: "Daiquiri",
+    type: "cocktails",
+    ingredients: ["white rum", "lime juice", "sugar"],
+    origin: ["USA", "Cuba"],
+    image: "image-daiquiri.jpg",
   },
   {
     name: "Cosmopolitan",
@@ -82,6 +108,8 @@ export const drinks = [
     origin: ["USA", "France"],
     image: "image-bloody-mary.jpg",
   },
+
+  // shots
   {
     name: "Kamikaze",
     type: "shots",
@@ -89,6 +117,8 @@ export const drinks = [
     origin: ["USA", "Japan"],
     image: "image-kamikaze.jpg",
   },
+
+  // long drinks
   {
     name: "Whiskey Cola",
     type: "long drinks",
