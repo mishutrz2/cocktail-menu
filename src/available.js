@@ -13,7 +13,7 @@ export const availableIngredients = [
   "lime juice",
   //"cranberry juice",
   "orange juice",
-  "-apple juice",
+  //"apple juice",
   "tomato juice",
   "lemon juice",
   //"orange liqueur",

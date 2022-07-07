@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { availableIngredients } from "./available.js";
 
 const ingredientss = [
   { _id: 1, name: "vodka" },
@@ -58,8 +59,11 @@ function Filters(props) {
       filtersView && (
         <div className="checkbox-container">
           {ingredientss.map((value, index) => {
+            let cName = "filterItem";
+            if (availableIngredients.indexOf(value.name) === -1)
+              cName = "unavl";
             return (
-              <div key={index} className="filterItem">
+              <div key={index} className={cName}>
                 <input
                   className="filterItemInput"
                   id={value.name}

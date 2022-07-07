@@ -79,8 +79,16 @@ body{
 }
 
 .unavailable{
-  background-color: rgb(105, 105, 105);
+  background-color: rgb(90, 90, 90) ;
 }
+
+.unavl{
+  padding: 12px 10px 8px 40px;
+  background-color: red;
+  width: 320px;
+  font-weight: 600;
+}
+
 
 .hide{
   display: none;
