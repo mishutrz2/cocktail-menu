@@ -2,21 +2,11 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import Filters from "./Filters";
 import Item from "./Item";
-import { listIngredients, drinks } from "./available.js";
+import { availableIngredients, drinks } from "./available.js";
 
 function App() {
-  // const [Filters, setFilters] = useState({ ingredients: [], type: "all" });
   const [ingredients, setIngredients] = useState([]);
   const [type, setType] = useState("all");
-  const [availableIngredients, setAvailableIngredients] = useState([]);
-
-  const getAvailableIngredients = () => {
-    let a = [];
-    listIngredients.forEach((el) => {
-      if (el.at(0) !== "-") a.push(el);
-    });
-    setAvailableIngredients(a);
-  };
 
   const handleFilters = (ingredients) => {
     setIngredients(ingredients);
@@ -53,10 +43,6 @@ function App() {
       </div>
     );
   };
-
-  useEffect(() => {
-    getAvailableIngredients();
-  }, []);
 
   return (
     <div>

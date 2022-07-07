@@ -1,30 +1,30 @@
 // unavailable ingredients have a dash in front of their name
 // ingredients must also be present in Filter.js "ingredients" array !!!
-export const listIngredients = [
+export const availableIngredients = [
   "vodka",
   "tequila",
   "whiskey",
-  "-rum",
+  //"rum",
   "gin",
-  "-lemon vodka",
+  //"lemon vodka",
   "triple sec",
   "blue curacao",
   "lime juice",
-  "-cranberry juice",
+  //"cranberry juice",
   "orange juice",
   "-apple juice",
   "tomato juice",
   "lemon juice",
-  "-orange liqueur",
-  "-melon liqueur",
-  "-banana liqueur",
+  //"orange liqueur",
+  //"melon liqueur",
+  //"banana liqueur",
   "cola",
   "tonic",
   "ice",
   "salt",
   "black pepper",
   "simple syrup",
-  "-sweet and sour",
+  //"sweet and sour",
   "water",
 ];
 
