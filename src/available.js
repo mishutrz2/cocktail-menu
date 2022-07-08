@@ -1,5 +1,4 @@
-// unavailable ingredients have a dash in front of their name
-// ingredients must also be present in Filter.js "ingredients" array !!!
+// unavailable ingredients are commented out
 export const availableIngredients = [
   "vodka",
   "tequila",
