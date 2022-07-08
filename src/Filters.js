@@ -21,30 +21,6 @@ const ingredientss = [
   { _id: 16, name: "tonic" },
 ];
 
-// const spirits = [
-//   "vodka",
-//   "tequila",
-//   "whiskey",
-//   "rum",
-//   "white rum",
-//   "gin",
-//   "triple sec",
-//   "lemon vodka",
-//   "blue curacao",
-// ];
-// const juices = [
-//   "lime juice",
-//   "cranberry juice",
-//   "orange juice",
-//   "lemon juice",
-//   "apple juice",
-//   "tomato juice",
-// ];
-// const liqueur = ["orange liqueur", "melon liqueur", "banana liqueur"];
-// const misc = ["ice","black pepper", "salt", "sugar", "simple syrup", "almond syrup", "sweet and sour", "water", "cola", "tonic"];
-// // all ingredients in filters list
-// const ingredients = spirits.concat(juices).concat(liqueur).concat(misc);
-
 function Filters(props) {
   const [drinkType, setDrinkType] = useState("all");
   const [filtersView, setFiltersView] = useState(false);

@@ -19,6 +19,9 @@ export const availableIngredients = [
   //"orange liqueur",
   //"melon liqueur",
   //"banana liqueur",
+  "almond liqueur",
+  "coffee liqueur",
+  "irish cream",
   "cola",
   "tonic",
   "ice",
@@ -26,9 +29,15 @@ export const availableIngredients = [
   "sugar",
   "black pepper",
   "simple syrup",
+  "grenadine syrup",
+  "whipped cream",
+  "ice cream",
   //"almond syrup",
   //"sweet and sour",
   "water",
+  //"Hpnotiq",
+  "Jagermeister",
+  //"Oreos",
 ];
 
 //
@@ -117,7 +126,32 @@ export const drinks = [
     origin: ["USA", "Japan"],
     image: "image-kamikaze.jpg",
   },
-
+  {
+    name: "Blowjob",
+    type: "shots",
+    ingredients: [
+      "almond liqueur",
+      "coffee liqueur",
+      "irish cream",
+      "whipped cream",
+    ],
+    origin: [""],
+    image: "image-blowjob.png",
+  },
+  {
+    name: "Deep Ocean",
+    type: "shots",
+    ingredients: ["blue curacao", "rum", "Hpnotiq"],
+    origin: [""],
+    image: "image-deep-ocean.jpg",
+  },
+  {
+    name: "Monkey Brain Shot",
+    type: "shots",
+    ingredients: ["vodka", "lemon juice", "irish cream", "grenadine syrup"],
+    origin: [""],
+    image: "image-monkey-brain.jpg",
+  },
   // long drinks
   {
     name: "Whiskey Cola",
@@ -132,5 +166,13 @@ export const drinks = [
     ingredients: ["gin", "tonic"],
     origin: ["UK", "India"],
     image: "image-gin-tonic.jpg",
+  },
+  // other
+  {
+    name: "Jagermeister Oreo Milkshake",
+    type: "other",
+    ingredients: ["Jagermeister", "Oreos", "ice cream"],
+    origin: [],
+    image: "image-Jager-Oreo-shake.jpg",
   },
 ];
