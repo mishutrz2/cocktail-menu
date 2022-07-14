@@ -3,7 +3,7 @@ export const availableIngredients = [
   "vodka",
   "tequila",
   "whiskey",
-  "rum",
+  // "rum",
   "white rum",
   "gin",
   //"lemon vodka",
@@ -31,18 +31,23 @@ export const availableIngredients = [
   "salt",
   "sugar",
   "black pepper",
+  "tajin powder",
   "simple syrup",
   "grenadine syrup",
   // "whipped cream",
+  "fresh cream",
   // "ice cream",
   //"almond syrup",
   "sweet and sour",
   "water",
   "soda water",
+  "ginger beer",
   // "mint leaves",
   // "Hpnotiq",
   "Jagermeister",
   //"Oreos",
+  // "olives",
+  "jalapenos",
 ];
 
 //
@@ -59,6 +64,13 @@ export const availableIngredients = [
 
 export const drinks = [
   // cocktails
+  {
+    name: "Moscow Mule",
+    type: "cocktails",
+    ingredients: ["vodka", "lime juice", "ginger beer", "ice"],
+    origin: [""],
+    image: "image-moscow-mule.jpg",
+  },
   {
     name: "Margarita",
     type: "cocktails",
@@ -86,6 +98,95 @@ export const drinks = [
     ],
     origin: [""],
     image: "image-blue-margarita.jpg",
+  },
+  {
+    name: "Blue Cosmo",
+    type: "cocktails",
+    ingredients: ["vodka", "blue curacao", "cranberry juice", "ice"],
+    origin: [""],
+    image: "image-blue-cosmo.jpg",
+  },
+  {
+    name: "White Russian",
+    type: "cocktails",
+    ingredients: ["vodka", "coffee liqueur", "fresh cream", "ice"],
+    origin: [""],
+    image: "image-white-russian.jpg",
+  },
+  {
+    name: "Pina Colada",
+    type: "cocktails",
+    ingredients: ["white rum", "coconut cream", "pineapple juice", "ice"],
+    origin: [""],
+    image: "image-pina-colada.jpg",
+  },
+  {
+    name: "Cuba Libre",
+    type: "cocktails",
+    ingredients: ["rum", "cola", "lime juice", "ice"],
+    origin: [""],
+    image: "image-cuba-libre.jpg",
+  },
+
+  {
+    name: "Sailors Sunrise",
+    type: "cocktails",
+    ingredients: ["rum", "orange juice", "grenadine syrup", "ice"],
+    origin: [""],
+    image: "image-sailors-sunrise.jpg",
+  },
+  {
+    name: "Bay Breeze",
+    type: "cocktails",
+    ingredients: ["vodka", "cranberry juice", "pineapple juice", "ice"],
+    origin: [""],
+    image: "image-bay-breeze.jpg",
+  },
+  {
+    name: "Blue Arrow",
+    type: "cocktails",
+    ingredients: ["gin", "triple sec", "blue curacao", "lime juice", "ice"],
+    origin: [""],
+    image: "image-blue-arrow.jpg",
+  },
+  {
+    name: "Gin Martini",
+    type: "cocktails",
+    ingredients: ["gin", "dry vermouth", "olives", "ice"],
+    origin: [""],
+    image: "image-gin-martini.jpg",
+  },
+
+  {
+    name: "Spicy Margarita",
+    type: "cocktails",
+    ingredients: [
+      "tequila",
+      "triple sec",
+      "simple syrup",
+      "lime juice",
+      "tajin powder",
+      "jalapenos",
+      "ice",
+    ],
+    origin: [""],
+    image: "image-spicy-margarita.jpg",
+  },
+
+  {
+    name: "Hurricane",
+    type: "cocktails",
+    ingredients: [
+      "white rum",
+      "rum",
+      "lime juice",
+      "orange juice",
+      "simple syrup",
+      "grenadine syrup",
+      "ice",
+    ],
+    origin: [""],
+    image: "image-hurricane.jpeg",
   },
   {
     name: "Tequila Sunrise",
@@ -181,7 +282,7 @@ export const drinks = [
     type: "cocktails",
     ingredients: [
       "vodka",
-      "rum",
+      "white rum",
       "gin",
       "tequila",
       "triple sec",
@@ -238,7 +339,7 @@ export const drinks = [
   {
     name: "Deep Ocean",
     type: "shots",
-    ingredients: ["blue curacao", "rum", "Hpnotiq"],
+    ingredients: ["blue curacao", "white rum", "Hpnotiq"],
     origin: [""],
     image: "image-deep-ocean.jpg",
   },
@@ -305,6 +406,20 @@ export const drinks = [
     image: "image-rum-coke.jpg",
   },
   // other
+  {
+    name: "Coffee",
+    type: "other",
+    ingredients: [],
+    origin: [""],
+    image: "image-coffee.jpg",
+  },
+  {
+    name: "Black Russian",
+    type: "other",
+    ingredients: ["vodka", "coffee liqueur", "ice"],
+    origin: [""],
+    image: "image-black-russian.jpg",
+  },
   {
     name: "Jagermeister Oreo Milkshake",
     type: "other",
