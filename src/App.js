@@ -18,41 +18,47 @@ function App() {
   };
 
   const renderDrinks = () => {
-    return (
-      <div>
-        {drinks.map((val, idx) => {
-          let available = true;
-          let show = true;
+    const v = drinks.map((val, idx) => {
+      let available = true;
+      let show = true;
 
-          // hide if another type is selected
-          if (val.type !== type && type !== "all") show = false;
+      // hide if another type is selected
+      if (val.type !== type && type !== "all") show = false;
 
-          // hide depending on selected filters
-          ingredients.forEach((el) => {
-            if (val.ingredients.indexOf(el) === -1 && ingredients.length > 0)
-              show = false;
-          });
+      // hide depending on selected filters
+      ingredients.forEach((el) => {
+        if (val.ingredients.indexOf(el) === -1 && ingredients.length > 0) {
+          show = false;
+        }
+      });
 
-          // gray out unavailable drinks
-          val.ingredients.forEach((el) => {
-            if (availableIngredients.indexOf(el) === -1) available = false;
-          });
+      // gray out unavailable drinks
+      val.ingredients.forEach((el) => {
+        if (availableIngredients.indexOf(el) === -1) available = false;
+      });
 
-          return (
-            <div key={idx}>
-              <Item
-                name={val.name}
-                imgPath={val.image}
-                ingredients={val.ingredients}
-                origin={val.origin}
-                available={available}
-                show={show}
-              ></Item>
-            </div>
-          );
-        })}
-      </div>
-    );
+      return (
+        <div location={available ? 0 : 1} key={idx}>
+          <Item
+            name={val.name}
+            imgPath={val.image}
+            ingredients={val.ingredients}
+            origin={val.origin}
+            available={available}
+            show={show}
+          ></Item>
+        </div>
+      );
+    });
+
+    const sortedArr = v.reduce((acc, element) => {
+      if (!element.props.location) {
+        return [element, ...acc];
+      }
+      return [...acc, element];
+    }, []);
+
+    return <div>{sortedArr}</div>;
   };
 
   return (
@@ -68,6 +74,7 @@ function App() {
       {"with: " + ingredients.join(", ")}
       <hr />
       <div>{renderDrinks()}</div>
+      {/* <div>{renderDrinksNot()}</div> */}
       <br />
 
       {/*  */}

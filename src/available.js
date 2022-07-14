@@ -34,6 +34,7 @@ export const availableIngredients = [
   "tajin powder",
   "simple syrup",
   "grenadine syrup",
+  "coconut syrup",
   // "whipped cream",
   "fresh cream",
   // "ice cream",
@@ -116,7 +117,7 @@ export const drinks = [
   {
     name: "Pina Colada",
     type: "cocktails",
-    ingredients: ["white rum", "coconut cream", "pineapple juice", "ice"],
+    ingredients: ["white rum", "coconut syrup", "pineapple juice", "ice"],
     origin: [""],
     image: "image-pina-colada.jpg",
   },
@@ -246,7 +247,7 @@ export const drinks = [
   {
     name: "Daiquiri",
     type: "cocktails",
-    ingredients: ["white rum", "lime juice", "sugar"],
+    ingredients: ["white rum", "lime juice", "sugar", "ice"],
     origin: ["USA", "Cuba"],
     image: "image-daiquiri.jpg",
   },
@@ -254,7 +255,7 @@ export const drinks = [
     name: "Cosmopolitan",
     type: "cocktails",
     ingredients: [
-      "lemon vodka",
+      "vodka",
       "triple sec",
       "cranberry juice",
       "lime juice",
@@ -262,6 +263,13 @@ export const drinks = [
     ],
     origin: ["USA"],
     image: "image-cosmopolitan.jpg",
+  },
+  {
+    name: "Black Russian",
+    type: "cocktails",
+    ingredients: ["vodka", "coffee liqueur", "ice"],
+    origin: [""],
+    image: "image-black-russian.jpg",
   },
   {
     name: "Bloody Marry",
@@ -286,7 +294,8 @@ export const drinks = [
       "gin",
       "tequila",
       "triple sec",
-      "sweeet and sour",
+      "lime juice",
+      "simple syrup",
       "cola",
       "ice",
     ],
@@ -346,7 +355,7 @@ export const drinks = [
   {
     name: "Lemon Drop",
     type: "shots",
-    ingredients: ["vodka", "lemon juice", "simple syrup", "salt", "ice"],
+    ingredients: ["vodka", "lemon juice", "simple syrup", "salt"],
     origin: [""],
     image: "image-lemon-drop.jpg",
   },
@@ -413,13 +422,7 @@ export const drinks = [
     origin: [""],
     image: "image-coffee.jpg",
   },
-  {
-    name: "Black Russian",
-    type: "other",
-    ingredients: ["vodka", "coffee liqueur", "ice"],
-    origin: [""],
-    image: "image-black-russian.jpg",
-  },
+
   {
     name: "Jagermeister Oreo Milkshake",
     type: "other",
