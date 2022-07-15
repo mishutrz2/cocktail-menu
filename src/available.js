@@ -39,7 +39,7 @@ export const availableIngredients = [
   "fresh cream",
   // "ice cream",
   //"almond syrup",
-  "sweet and sour",
+  // "sweet and sour",
   "water",
   "soda water",
   "ginger beer",
@@ -49,6 +49,7 @@ export const availableIngredients = [
   //"Oreos",
   // "olives",
   "jalapenos",
+  "tabasco sauce",
 ];
 
 //
@@ -71,6 +72,13 @@ export const drinks = [
     ingredients: ["vodka", "lime juice", "ginger beer", "ice"],
     origin: [""],
     image: "image-moscow-mule.jpg",
+  },
+  {
+    name: "Ginger Mule",
+    type: "cocktails",
+    ingredients: ["gin", "lime juice", "ginger beer", "ice"],
+    origin: [""],
+    image: "image.jpg",
   },
   {
     name: "Margarita",
@@ -280,6 +288,7 @@ export const drinks = [
       "lemon juice",
       "salt",
       "black pepper",
+      "tabasco sauce",
       "ice",
     ],
     origin: ["USA", "France"],
@@ -346,11 +355,50 @@ export const drinks = [
     image: "image-blowjob.png",
   },
   {
+    name: "Purple Starfucker",
+    type: "shots",
+    ingredients: [
+      "blue curacao",
+      "peach schnapps",
+      "almond liqueur",
+      "cranberry juice",
+    ],
+    origin: [""],
+    image: "image.jpg",
+  },
+  {
+    name: "Red Headed Slut",
+    type: "shots",
+    ingredients: ["peach schnapps", "Jagermeister", "cranberry juice"],
+    origin: [""],
+    image: "image.jpg",
+  },
+  {
+    name: "Apocalypse Now",
+    type: "shots",
+    ingredients: ["tequila", "dry vermouth", "irish cream"],
+    origin: [""],
+    image: "image-apocalypse-now.png",
+  },
+  {
     name: "Deep Ocean",
     type: "shots",
     ingredients: ["blue curacao", "white rum", "Hpnotiq"],
     origin: [""],
     image: "image-deep-ocean.jpg",
+  },
+  {
+    name: "Water Moccasin",
+    type: "shots",
+    ingredients: [
+      "whiskey",
+      "peach schnapps",
+      "triple sec",
+      "lime juice",
+      "simple syrup",
+    ],
+    origin: [""],
+    image: "image.jpg",
   },
   {
     name: "Lemon Drop",
@@ -360,7 +408,7 @@ export const drinks = [
     image: "image-lemon-drop.jpg",
   },
   {
-    name: "Alien Brain Hemorage Shooter",
+    name: "Alien Brain Hemorage",
     type: "shots",
     ingredients: [
       "peach schnapps",
@@ -372,7 +420,7 @@ export const drinks = [
     image: "image-alien-brain-hemorage.jpg",
   },
   {
-    name: "Monkey Brain Shot",
+    name: "Monkey Brain",
     type: "shots",
     ingredients: ["vodka", "lemon juice", "irish cream", "grenadine syrup"],
     origin: [""],
@@ -408,7 +456,7 @@ export const drinks = [
     image: "image-vodka-cranberry.jpeg",
   },
   {
-    name: "Rum and Coke",
+    name: "Rum Cola",
     type: "long drinks",
     ingredients: ["rum", "cola", "ice"],
     origin: [""],
