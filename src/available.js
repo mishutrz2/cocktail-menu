@@ -205,6 +205,21 @@ export const drinks = [
     image: "image-tequila-sunrise.jpeg",
   },
   {
+    name: "Blood Orange Margarita",
+    type: "cocktails",
+    ingredients: [
+      "tequila",
+      "blood orange juice",
+      "triple sec",
+      "lime juice",
+      "simple syrup",
+      "salt",
+      "ice",
+    ],
+    origin: [""],
+    image: "image-blood-orange-margarita.jpg",
+  },
+  {
     name: "Sex On The Beach",
     type: "cocktails",
     ingredients: [
