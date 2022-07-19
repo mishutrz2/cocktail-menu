@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Filters from "./Filters";
 import Item from "./Item";
 import { availableIngredients, drinks } from "./available.js";
@@ -7,6 +7,7 @@ import { availableIngredients, drinks } from "./available.js";
 function App() {
   const [ingredients, setIngredients] = useState([]);
   const [type, setType] = useState("all");
+  // const renderCount = useRef(drinks.length);
 
   const handleFilters = (ingredients) => {
     setIngredients(ingredients);
@@ -34,7 +35,9 @@ function App() {
 
       // gray out unavailable drinks
       val.ingredients.forEach((el) => {
-        if (availableIngredients.indexOf(el) === -1) available = false;
+        if (availableIngredients.indexOf(el) === -1) {
+          available = false;
+        }
       });
 
       return (
@@ -64,6 +67,7 @@ function App() {
   return (
     <div>
       <br />
+
       <Filters
         handleDrinkType={(type) => handleDrinkType(type)}
         handleFilters={(filters) => handleFilters(filters)}
@@ -71,8 +75,10 @@ function App() {
       <br />
 
       {/*  */}
+
       {"with: " + ingredients.join(", ")}
       <hr />
+
       <div>{renderDrinks()}</div>
       {/* <div>{renderDrinksNot()}</div> */}
       <br />
