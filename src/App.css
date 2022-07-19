@@ -65,6 +65,20 @@ body{
   cursor: pointer;
 }
 
+.ingsBtn{
+  background-color: white;
+  color: black;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 900;
+  width: 320px;
+  margin: 10px 0px 4px 0px;
+  cursor: pointer;
+}
+
 .item{
   float: left;
   background-color: black;

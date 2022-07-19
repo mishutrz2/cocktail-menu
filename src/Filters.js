@@ -18,6 +18,7 @@ const ingredientss = [
   { _id: 12, name: "lemon juice" },
   // { _id: 13, name: "apple juice" },
   // { _id: 14, name: "tomato juice" },
+  { _id: 13, name: "coffee" },
   { _id: 15, name: "cola" },
   { _id: 16, name: "tonic" },
 ];
@@ -76,6 +77,7 @@ function Filters(props) {
     setChecked(newChecked);
 
     // update in parent component
+    console.log(checked);
     props.handleFilters(newChecked);
   };
 
