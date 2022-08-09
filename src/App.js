@@ -49,6 +49,7 @@ function App() {
             origin={val.origin}
             available={available}
             show={show}
+            numbers={val.numbers}
           ></Item>
         </div>
       );

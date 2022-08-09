@@ -38,7 +38,12 @@ function Item(props) {
     return (
       <div className="move">
         {props.ingredients.map((el, idx) => {
-          return <li key={idx}> {el} </li>;
+          const txt = props.numbers;
+          return (
+            <>
+              <li key={idx}> {el}</li>
+            </>
+          );
         })}
       </div>
     );

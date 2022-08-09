@@ -14,6 +14,7 @@ export const availableIngredients = [
   "orange juice",
   //"apple juice",
   "tomato juice",
+  "grapefruit juice",
   "lemon juice",
   //"orange liqueur",
   //"melon liqueur",
@@ -124,6 +125,7 @@ export const drinks = [
     name: "Moscow Mule",
     type: "cocktails",
     ingredients: ["vodka", "lime juice", "ginger beer", "mint leaves", "ice"],
+    numbers: [" - 2x ", " - 0.5x ", " - 4x ", "", ""],
     origin: [""],
     image: "image-moscow-mule.jpg",
   },
@@ -235,7 +237,20 @@ export const drinks = [
     origin: [""],
     image: "image-spicy-margarita.jpg",
   },
-
+  {
+    name: "Sea Breeze",
+    type: "cocktails",
+    ingredients: ["vodka", "cranberry juice", "grapefruit juice", "ice"],
+    origin: [""],
+    image: "image-sea-breeze.jpg",
+  },
+  {
+    name: "Vodka Sidecar",
+    type: "cocktails",
+    ingredients: ["vodka", "triple sec", "lemon juice", "ice"],
+    origin: [""],
+    image: "image-vodka-sidecar.jpg",
+  },
   {
     name: "Hurricane",
     type: "cocktails",
@@ -270,6 +285,7 @@ export const drinks = [
       "salt",
       "ice",
     ],
+
     origin: [""],
     image: "image-blood-orange-margarita.jpg",
   },
@@ -287,9 +303,38 @@ export const drinks = [
     image: "image-sex-beach.jpg",
   },
   {
+    name: "Blue Monday",
+    type: "cocktails",
+    ingredients: ["vodka", "triple sec", "blue curacao", "ice"],
+    origin: [""],
+    image: "image-blue-monday.jpg",
+  },
+  {
+    name: "South Side",
+    type: "cocktails",
+    ingredients: ["gin", "lime juice", "simple syrup", "mint leaves", "ice"],
+    origin: [""],
+    image: "image-south-side.jpg",
+  },
+  {
     name: "Paloma",
     type: "cocktails",
-    ingredients: ["tequila", "lime juice", "grapefruit soda", "ice"],
+    ingredients: [
+      "tequila",
+      "grapefruit juice",
+      "lime juice",
+      "soda water",
+      "simple syrup",
+      "ice",
+    ],
+    numbers: [
+      "2 parts ",
+      "2 parts ",
+      "0.5 parts ",
+      "2 parts ",
+      "0.25 parts ",
+      "",
+    ],
     origin: [""],
     image: "image-paloma.jpg",
   },
@@ -575,3 +620,44 @@ export const drinks = [
     image: "image-Jager-Oreo-shake.jpg",
   },
 ];
+
+// export const drinks = [
+//   // cocktails
+//   {
+//     name: "Moscow Mule",
+//     type: "cocktails",
+//     ingredients: ["vodka", "lime juice", "ginger beer", "mint leaves", "ice"],
+//     numbers: [" - 2x ", " - 0.5x ", " - 4x ", "", ""],
+//     origin: [""],
+//     image: "image-moscow-mule.jpg",
+//   },
+//   {
+//     name: "Paloma",
+//     type: "cocktails",
+//     ingredients: [
+//       "tequila",
+//       "grapefruit juice",
+//       "lime juice",
+//       "soda water",
+//       "simple syrup",
+//       "ice",
+//     ],
+//     numbers: [" - 2x", " - 2x", " - 0.5x", " - 2x", " - 0.25x", ""],
+//     origin: [""],
+//     image: "image-paloma.jpg",
+//   },
+//   {
+//     name: "Margarita",
+//     type: "cocktails",
+//     ingredients: [
+//       "tequila",
+//       "triple sec",
+//       "lime juice",
+//       "simple syrup",
+//       "salt",
+//       "ice",
+//     ],
+//     origin: ["Mexico"],
+//     image: "image-margarita.jpg",
+//   },
+// ];
